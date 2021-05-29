@@ -12,6 +12,6 @@ Mandatory features
 - Visual Bag-of-Words
 - Speeded up robust features (SURF)
 
-## Datasets
+## Datasets 🌐
 
 <http://host.robots.ox.ac.uk/pascal/VOC/voc2007/index.html>
