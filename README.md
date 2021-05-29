@@ -1,4 +1,4 @@
-# `Object detection using Semi-Supervised Classification`
+# `Object detection using SSL Classification`
 Semi-Supervised Learning on image classification semester project.
 
 
