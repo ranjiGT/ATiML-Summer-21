@@ -65,7 +65,7 @@ class DataLoader(data.Dataset):
         
 if __name__ == '__main__':
     
-    path = r'C:\Users\Shubham\Documents\Course\Summer2021\ATML\project\VOCtrainval_06-Nov-2007\VOCdevkit\VOC2007/'
+    path = r'C:\Users\User\Documents\Course\Summer2021\ATML\project\VOCtrainval_06-Nov-2007\VOCdevkit\VOC2007/'
     data_load = DataLoader(data_path = path)
     
     data = np.zeros((10,256,256,3))
@@ -79,6 +79,3 @@ if __name__ == '__main__':
     
 import matplotlib.pyplot as plt
 plt.imshow(x)
-    
-    
-    
