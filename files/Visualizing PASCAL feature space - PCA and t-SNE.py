@@ -110,7 +110,7 @@ fashion_tsne = TSNE(n_components=2).fit_transform(features)
 # In[10]:
 
 
-def fashion_scatter(x, colors):
+def plotter(x, colors):
     # choose a color palette with seaborn.
     num_classes = len(np.unique(colors))
     palette = np.array(sns.color_palette("hls", num_classes))
@@ -138,5 +138,5 @@ def fashion_scatter(x, colors):
             PathEffects.Normal()])
         txts.append(txt)
         
-fashion_scatter(fashion_tsne, labels)
+plotter(fashion_tsne, labels)
 
