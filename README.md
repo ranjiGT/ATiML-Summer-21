@@ -25,15 +25,15 @@ Folder Structure :open_file_folder:
 
     .
     ├── HLD_LLD                  # Documentation files (.pdf)
-    ├── codebase                    # workable codebase (.py)
+    ├── codebase                  # workable codebase (.py)
     ├── fig
-          └── plots                         # Compiled image files (.png, .jpg)
-    ├── files                                       # Legacy files                  
-    ├── posterbase                                      # layout and template files (.sty, .tex)                                      
+          └── plots                 # Compiled image files (.png, .jpg)
+    ├── files                       # Legacy files                  
+    ├── posterbase                  # layout and template files (.sty, .tex)                                      
     ├── .gitignore
     ├── LICENSE
     ├── README.md
-    └── requirements.txt                                       # Python library files for this project (versioned)
+    └── requirements.txt          # Python library files for this project (versioned)
 
 
 
