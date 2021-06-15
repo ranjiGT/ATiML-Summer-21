@@ -16,6 +16,27 @@ Supplementary features
 - Local Binary Patterns
 - Color Histogram
 
+Folder Structure :open_file_folder:
+============================
+
+> Folder structure and naming conventions for this project
+
+### A top-level directory layout
+
+    .
+    ├── HLD_LLD                  # Documentation files (.pdf)
+    ├── codebase                    # workable codebase (.py)
+    ├── fig
+          └── plots                         # Compiled image files (.png, .jpg)
+    ├── files                                       # Legacy files                  
+    ├── posterbase                                      # layout and template files (.sty, .tex)                                      
+    ├── .gitignore
+    ├── LICENSE
+    ├── README.md
+    └── requirements.txt                                       # Python library files for this project (versioned)
+
+
+
 ## Datasets 🌐
 
 - F. Perronnin, J. Sánchez and Yan Liu, "Large-scale image categorization with explicit data embedding," _2010 IEEE Computer Society Conference on Computer Vision and Pattern Recognition_, 2010, pp. 2297-2304, doi: 10.1109/CVPR.2010.5539914.
