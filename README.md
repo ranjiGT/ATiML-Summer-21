@@ -37,7 +37,7 @@ Folder Structure :open_file_folder:
 
 
 
-## Datasets 🌐
+## Datasets and References🌐
 
 - F. Perronnin, J. Sánchez and Yan Liu, "Large-scale image categorization with explicit data embedding," _2010 IEEE Computer Society Conference on Computer Vision and Pattern Recognition_, 2010, pp. 2297-2304, doi: 10.1109/CVPR.2010.5539914.
 
