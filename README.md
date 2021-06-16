@@ -53,4 +53,4 @@ Folder Structure :open_file_folder:
 - Pavan Tummala
 - Usama Ashfaq
 - Syed Muhammad Laique Abbas
-- Ranjiraj Rajendran Nair
+- Ranji Raj
