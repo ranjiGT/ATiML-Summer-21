@@ -11,6 +11,7 @@ Mandatory features
 - Visual Bag-of-Words
 - Speeded up robust features (SURF)
 
+![](https://github.com/ranjiGT/ATiML-Summer-21/blob/main/files/surf-1.jpg)
 Supplementary features
 
 - Local Binary Patterns
