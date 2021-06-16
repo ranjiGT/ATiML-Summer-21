@@ -28,7 +28,7 @@ Folder Structure :open_file_folder:
 
     .
     ├── HLD_LLD                  # Documentation files (.pdf)
-    ├── codebase                  # workable codebase (.py)
+    ├── codebase                  # workable codebase (.py, .ipynb)
     ├── fig
           └── plots                 # Compiled image files (.png, .jpg)
     ├── files                       # Legacy files                  
