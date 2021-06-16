@@ -41,4 +41,4 @@ Folder Structure :open_file_folder:
 
 - F. Perronnin, J. Sánchez and Yan Liu, "Large-scale image categorization with explicit data embedding," _2010 IEEE Computer Society Conference on Computer Vision and Pattern Recognition_, 2010, pp. 2297-2304, doi: 10.1109/CVPR.2010.5539914.
 
-- Everingham, L. Van Gool, C. K. I. Williams, J. Winn, and A. Zisserman. _The PASCAL Visual Object Classes Challenge 2007 (VOC2007)_ Results.http://www.pascal-network.org/challenges/VOC/voc2007/workshop/index.html
+- Everingham, L. Van Gool, C. K. I. Williams, J. Winn, and A. Zisserman. _The PASCAL Visual Object Classes Challenge 2007 (VOC2007)_ Results.http://host.robots.ox.ac.uk/pascal/VOC/voc2007/index.html
