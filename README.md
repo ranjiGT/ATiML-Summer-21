@@ -33,7 +33,7 @@ Folder Structure :open_file_folder:
     ├── .gitignore
     ├── LICENSE
     ├── README.md
-    └── requirements.txt          # Python library files for this project (versioned)
+    └── requirements.txt          # Python libraries for this project (versioned)
 
 
 
