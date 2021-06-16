@@ -38,8 +38,19 @@ Folder Structure :open_file_folder:
     ├── README.md
     └── requirements.txt          # Python libraries for this project (versioned)
 
+### Usage
 
+Code requires Python 3.6+ to run.
+Install the dependencies required for the code to run.
 
+```
+pip install -r requirements.txt
+```
+
+### For running the code
+```
+python code_base.py --data ..\VOCtrainval_06-Nov-2007\VOCdevkit\VOC2007\
+```
 ## Datasets and References🌐
 
 - F. Perronnin, J. Sánchez and Yan Liu, "Large-scale image categorization with explicit data embedding," _2010 IEEE Computer Society Conference on Computer Vision and Pattern Recognition_, 2010, pp. 2297-2304, doi: 10.1109/CVPR.2010.5539914.
