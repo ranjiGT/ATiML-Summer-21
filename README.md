@@ -40,7 +40,7 @@ Folder Structure :open_file_folder:
 
 ### Usage
 
-Code requires Python 3.6+ to run.
+Code requires Python 3.6 to run.
 Install the dependencies required for the code to run.
 
 ```
@@ -49,7 +49,7 @@ pip install -r requirements.txt
 
 ### For running the code
 ```
-python code_base.py --data ..\VOCtrainval_06-Nov-2007\VOCdevkit\VOC2007\
+python {change_the_model_here}.py --data ..\VOCtrainval_06-Nov-2007\VOCdevkit\VOC2007\
 ```
 ## Datasets and References🌐
 
