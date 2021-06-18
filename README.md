@@ -54,7 +54,8 @@ python {change_the_model_here}.py --data ..\VOCtrainval_06-Nov-2007\VOCdevkit\VO
 
 ### Our Findings in form of a Scientific Poster
 
-![](https://github.com/ranjiGT/ATiML-Summer-21/blob/main/posterbase/ScientificPoster_T02_ATiML_Final.pdf)
+<embed src="https://github.com/ranjiGT/ATiML-Summer-21/blob/main/posterbase/ScientificPoster_T02_ATiML_Final.pdf" type="application/pdf">
+
 
 ## Datasets and References🌐
 
