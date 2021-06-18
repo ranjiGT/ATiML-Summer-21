@@ -51,6 +51,11 @@ pip install -r requirements.txt
 ```
 python {change_the_model_here}.py --data ..\VOCtrainval_06-Nov-2007\VOCdevkit\VOC2007\
 ```
+
+### Our Findings in form of a Scientific Poster
+
+[embed]http://example.com/file.pdf[/embed]
+
 ## Datasets and References🌐
 
 - F. Perronnin, J. Sánchez and Yan Liu, "Large-scale image categorization with explicit data embedding," _2010 IEEE Computer Society Conference on Computer Vision and Pattern Recognition_, 2010, pp. 2297-2304, doi: 10.1109/CVPR.2010.5539914.
