@@ -56,9 +56,9 @@ python {change_the_model_here}.py --data ..\VOCtrainval_06-Nov-2007\VOCdevkit\VO
 
 ![](https://github.com/ranjiGT/ATiML-Summer-21/blob/main/posterbase/Poster.png)
 
-## Downlaod in PDF
+## Download in PDF
 
-![](https://github.com/ranjiGT/ATiML-Summer-21/blob/main/posterbase/flowcode.png)
+![](https://github.com/ranjiGT/ATiML-Summer-21/blob/main/posterbase/flowcode.png  =100x20)
 
 ## Datasets and References🌐
 
