@@ -1,76 +1,113 @@
-# `Object detection using SSL Classification`
+# Object Detection using Semi-Supervised Classification
 
-## `Preamble` :scroll:
-The Proceedings of the European Conference on Computer Vision has conducted a benchmark PASCAL Visual Object Challenge (VOC) evaluating performance on object class recognition (from 2005-2012, now finished). For our task, we examine the 2007 dataset which consists of several types of random images collected in January 2007 from _Flickr_. There are five challenges: classification, detection, segmentation, action classification, and person layout.
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Python 3.6+](https://img.shields.io/badge/Python-3.6%2B-blue.svg)](https://www.python.org/)
+[![Co-authored-by: aaashfaq](https://img.shields.io/badge/Co--authored--by-aaashfaq-brightgreen)](https://github.com/aaashfaq)
 
-Our goal from this challenge is to perform __image classification__ from several visual object classes in realistic scenes (i.e. not pre-segmented objects). And so, we will be using certain Semi-Supervised Learning approaches where we have both labeled and unlabeled sets to check if we get superior results as opposed to supervised techniques.
+## Overview
 
-Mandatory features
+This project explores **Semi-Supervised Learning (SSL)** approaches for image classification on the [PASCAL VOC 2007](http://host.robots.ox.ac.uk/pascal/VOC/voc2007/index.html) dataset (5,011 RGB images across 20 object classes). The central hypothesis is that SSL methods leveraging both labeled and unlabeled data can achieve competitive or superior results compared to purely supervised techniques — while significantly reducing the need for annotated data.
 
-- MPEG-7 Color Layout Descriptor
-- Visual Bag-of-Words
-- Speeded up robust features (SURF)
+Developed as part of the **Advanced Topics in Machine Learning (ATiML) — Summer 2021** course at Otto von Guericke University Magdeburg.
+
+## Methods
+
+### Semi-Supervised Learning Algorithms
+
+| Algorithm | Category | Implementation |
+|---|---|---|
+| **Label Propagation (LPA)** | Graph-based | `codebase/LabelPropagation.py` |
+| **Label Spreading** | Graph-based | `codebase/LabelSpreading.py` |
+| **Semi-Supervised GMM (SSGMM)** | Inductive (mixture model) | `codebase/SSGMM.py` |
+| **Semi-Supervised SVM (S3VM/TSVM)** | Margin-based | `files/SSL-S3VM.py` |
+
+### Feature Extraction
+
+**Primary features:**
+- **MPEG-7 Color Layout Descriptor** — image partitioning, DCT transformation, zigzag scanning
+- **Visual Bag-of-Words (VBOW)** with **SURF** keypoints — codebook construction via k-means, histogram encoding
+- **Speeded Up Robust Features (SURF)** — keypoint detection via OpenCV
 
 ![](https://github.com/ranjiGT/ATiML-Summer-21/blob/main/files/surf-1.jpg) ![](https://github.com/ranjiGT/ATiML-Summer-21/blob/main/files/surf-2.jpg)
 
+**Supplementary features:**
+- **Local Binary Patterns (LBP)** — texture descriptor
+- **Color Histogram** — color distribution descriptor
 
-Supplementary features
+### Data Pipeline
 
-- Local Binary Patterns
-- Color Histogram
+- PASCAL VOC XML annotation parsing with bounding box extraction
+- Feature normalization and combination via PCA dimensionality reduction
+- Stratified train/test split with configurable labeled/unlabeled ratios (0.1–0.9)
+- Class balancing via `RandomUnderSampler` (imbalanced-learn)
+- Feature selection via ANOVA (`SelectKBest` with `f_classif`)
 
-Folder Structure :open_file_folder:
-============================
-
-> Folder structure and naming conventions for this project
-
-### A top-level directory layout
-
-    .
-    ├── HLD_LLD                  # Documentation files (.pdf)
-    ├── codebase                  # workable codebase (.py, .ipynb)
-    ├── fig
-          └── plots                 # Compiled image files (.png, .jpg)
-    ├── files                       # Legacy files                  
-    ├── posterbase                  # layout and template files (.sty, .tex)                                      
-    ├── .gitignore
-    ├── LICENSE
-    ├── README.md
-    └── requirements.txt          # Python libraries for this project (versioned)
-
-### Usage
-
-Code requires Python 3.6 to run.
-Install the dependencies required for the code to run.
+## Project Structure
 
 ```
+.
+├── codebase/               # Final implementations (.py, .ipynb)
+│   ├── LabelPropagation.py
+│   ├── LabelSpreading.py
+│   ├── SSGMM.py
+│   └── SSGMM.ipynb
+├── files/                  # Legacy pipeline and utility scripts
+│   ├── data_loader.py
+│   ├── pipeline.py
+│   ├── pipeline_v2.py
+│   ├── SSL-S3VM.py
+│   └── VBOW.py
+├── fig/plots/              # Result plots (box plots, learning curves)
+├── HLD_LLD/                # High/Low Level Design documents (.pdf)
+├── posterbase/             # LaTeX poster source (Gemini/beamer theme)
+├── requirements.txt
+└── LICENSE
+```
+
+## Getting Started
+
+### Prerequisites
+
+Python 3.6 or higher is required.
+
+### Installation
+
+```bash
 pip install -r requirements.txt
 ```
 
-### For running the code
+### Running
+
+```bash
+python codebase/<model>.py --data path/to/VOCtrainval_06-Nov-2007/VOCdevkit/VOC2007/
 ```
-python {change_the_model_here}.py --data ..\VOCtrainval_06-Nov-2007\VOCdevkit\VOC2007\
-```
 
-### Our Findings in form of a Scientific Poster
+Replace `<model>` with one of: `LabelPropagation`, `LabelSpreading`, `SSGMM`.
 
-![](https://github.com/ranjiGT/ATiML-Summer-21/blob/main/posterbase/Poster.png)
+## Results
 
-## Download in PDF
+### Scientific Poster
 
-![](https://github.com/ranjiGT/ATiML-Summer-21/blob/main/posterbase/flowcode.png)
+![Poster](https://github.com/ranjiGT/ATiML-Summer-21/blob/main/posterbase/Poster.png)
 
-## Datasets and References🌐
+### Download PDF
 
-- F. Perronnin, J. Sánchez and Yan Liu, "Large-scale image categorization with explicit data embedding," _2010 IEEE Computer Society Conference on Computer Vision and Pattern Recognition_, 2010, pp. 2297-2304, doi: 10.1109/CVPR.2010.5539914.
+![QR Code](https://github.com/ranjiGT/ATiML-Summer-21/blob/main/posterbase/flowcode.png)
 
-- Everingham, L. Van Gool, C. K. I. Williams, J. Winn, and A. Zisserman. _The PASCAL Visual Object Classes Challenge 2007 (VOC2007)_ http://host.robots.ox.ac.uk/pascal/VOC/voc2007/index.html
+## References
 
+1. F. Perronnin, J. Sánchez and Yan Liu, "Large-scale image categorization with explicit data embedding," *2010 IEEE Computer Society Conference on Computer Vision and Pattern Recognition*, 2010, pp. 2297-2304, doi: [10.1109/CVPR.2010.5539914](https://doi.org/10.1109/CVPR.2010.5539914).
 
-## Contributors :man_technologist:
+2. M. Everingham, L. Van Gool, C. K. I. Williams, J. Winn, and A. Zisserman. *The PASCAL Visual Object Classes Challenge 2007 (VOC2007)*. [http://host.robots.ox.ac.uk/pascal/VOC/voc2007/index.html](http://host.robots.ox.ac.uk/pascal/VOC/voc2007/index.html)
 
-- Shubham Kumar Agrawal
-- Pavan Tummala
-- Usama Ashfaq
-- Syed Muhammad Laique Abbas
-- Ranji Raj
+## Contributors
+
+- **Shubham Kumar Agrawal** — Label Propagation
+- **Pavan Tummala** — Semi-Supervised GMM
+- **Usama Ashfaq** ([@aaashfaq](https://github.com/aaashfaq), usama.ashfaq@volkswagen.de)
+- **Syed Muhammad Laique Abbas** — Label Spreading
+- **Ranji Raj** — Visual Bag-of-Words, project infrastructure
+
+## License
+
+This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details.
