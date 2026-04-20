@@ -2,6 +2,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Python 3.6+](https://img.shields.io/badge/Python-3.6%2B-blue.svg)](https://www.python.org/)
+[![Co-authored-by: aaashfaq](https://img.shields.io/badge/Co--authored--by-aaashfaq-brightgreen)](https://github.com/aaashfaq)
 
 ## Overview
 
